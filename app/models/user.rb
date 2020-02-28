@@ -8,4 +8,6 @@
 #  updated_at :datetime         not null
 #
 class User < ApplicationRecord
+	has_one :library
+	validates_presence_of :email
 end

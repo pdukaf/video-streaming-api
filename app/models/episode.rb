@@ -19,6 +19,5 @@
 #
 class Episode < ApplicationRecord
   belongs_to :season
-  validates_presence_of :title
-  validates_presence_of :plot
+  validates_presence_of :title, :plot
 end
