@@ -11,5 +11,6 @@
 #
 class Season < ApplicationRecord
 	has_many :episodes, dependent: :destroy
+	has_many :libraries, dependent: :destroy
 	validates_presence_of :title, :plot, :number
 end

@@ -10,4 +10,5 @@
 #
 class Movie < ApplicationRecord
 	validates_presence_of :title, :plot
+	has_many :libraries, dependent: :destroy
 end
