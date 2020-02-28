@@ -9,6 +9,5 @@
 #  updated_at :datetime         not null
 #
 class Movie < ApplicationRecord
-	validates_presence_of :title
-	validates_presence_of :plot
+	validates_presence_of :title, :plot
 end
