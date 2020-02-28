@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
+	2.5.3
 
-Things you may want to cover:
+## Rails version
+	6.0.2
 
-* Ruby version
+## Database
+	Postgresql 
 
-* System dependencies
+## Project Setup Instruction
+1. Clone repo from `https://github.com/pdukaf/video-streaming-api`
+2. Run `bundle install` to install packages and dependencies.
+3. Create `database.yml` file inside `config` directory to configure database.
+6. Run `rake db:create` to create the database.
+7. Run `rake db:migrate` to generate the tables with associated fields.
+9. Run `rails s` to start the server.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
