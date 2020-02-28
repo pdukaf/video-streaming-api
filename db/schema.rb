@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_28_172122) do
+ActiveRecord::Schema.define(version: 2020_02_28_185651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,12 +43,12 @@ ActiveRecord::Schema.define(version: 2020_02_28_172122) do
   end
 
   create_table "purchases", force: :cascade do |t|
-    t.decimal "price", precision: 5, scale: 2
-    t.string "video_quality"
     t.bigint "movie_id", null: false
     t.bigint "season_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "price", precision: 3, scale: 2, default: "2.99"
+    t.string "video_quality"
     t.index ["movie_id"], name: "index_purchases_on_movie_id"
     t.index ["season_id"], name: "index_purchases_on_season_id"
   end

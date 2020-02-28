@@ -3,7 +3,7 @@
 # Table name: purchases
 #
 #  id            :bigint           not null, primary key
-#  price         :decimal(5, 2)
+#  price         :decimal(3, 2)    default("2.99")
 #  video_quality :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
@@ -23,5 +23,11 @@
 require 'rails_helper'
 
 RSpec.describe Purchase, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it {should belong_to(:movie)}
+  it {should belong_to (:season)}
+  it {should validate_presence_of(:video_quality)}
+  it "should be assigned default value of purchase" do
+  	purchase = Purchase.new
+  	expect(purchase.price).to eq(2.99)
+  end
 end

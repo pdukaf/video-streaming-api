@@ -3,7 +3,7 @@
 # Table name: purchases
 #
 #  id            :bigint           not null, primary key
-#  price         :decimal(5, 2)
+#  price         :decimal(3, 2)    default("2.99")
 #  video_quality :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
@@ -23,4 +23,5 @@
 class Purchase < ApplicationRecord
   belongs_to :movie
   belongs_to :season
+  validates_presence_of :video_quality
 end
