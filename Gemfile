@@ -33,10 +33,10 @@ group :development, :test do
 end
 
 group :test do
-	gem 'factory_girl_rails', '~> 4.9'
 	gem 'shoulda-matchers', '~> 4.3'
 	gem 'faker', '~> 2.10', '>= 2.10.2'
 	gem 'database_cleaner', '~> 1.8', '>= 1.8.3'
+  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
 end
 
 group :development do
